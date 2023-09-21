@@ -1,0 +1,147 @@
+﻿<Window x:Class="Magazynuj.UI.View.NewCounterpartyView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:adorners="http://gu.se/Adorners"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Magazynuj.UI" xmlns:viewmodels="clr-namespace:Magazynuj.UI.ViewModels"
+        mc:Ignorable="d"
+        Title="Kontrahent" Height="525" Width="800" ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary Source="Dictionary.xaml"/>
+    </Window.Resources>
+    <Window.DataContext>
+        <viewmodels:NewCounterpartyViewModel/>
+    </Window.DataContext>
+    <!--Source="pack://application:,,,/Magazynuj;component/Dictionary.xaml"-->
+    <Grid>
+        <TabControl>
+            <TabItem Header="Kontrahent">
+                <Grid Background="#FF005F7F">
+                    <Grid Margin="10,10,10,67" Background="#FF005F7F"/>
+                    <StackPanel Margin="10,414,10,0">
+                        <Grid Height="70">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="529*"/>
+                                <ColumnDefinition Width="123*"/>
+                                <ColumnDefinition Width="122*"/>
+
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="357" Foreground="White" Margin="0,-3,0,0" FontFamily="Candara"><Run Language="pl-pl" Text="Musisz podać kod kontrahenta! Musisz podać nazwę kontrahenta!"/></TextBlock>
+                            <Button Grid.Column="1" Content="Zapisz" Style="{StaticResource ButtonStandard}">
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                            <Button Grid.Column="2" Content="Anuluj" Style="{StaticResource ButtonStandard}">
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                    <Border Background="White" BorderBrush="#FF005F7F" BorderThickness="1,1,1,1" CornerRadius="15,15,15,15" Margin="10,10,10,72">
+                        <Grid Margin="11,11,11,9" Background="White">
+                            <TextBlock HorizontalAlignment="Left" Height="20" Margin="66,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Background="White" TextAlignment="Right" FontFamily="Candara"><Run Language="pl-pl" Text="Kod"/></TextBlock>
+                            <TextBlock HorizontalAlignment="Left" Height="20" Margin="66,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" TextAlignment="Right" FontFamily="Candara"><Run Language="pl-pl" Text="Nazwa"/></TextBlock>
+                            <TextBlock HorizontalAlignment="Left" Height="20" Margin="66,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Text="ul." TextAlignment="Right" FontFamily="Candara"/>
+                            <TextBox adorners:Watermark.Text="Kod kontrahenta:" HorizontalAlignment="Left" Height="20" Margin="116,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" BorderBrush="#FFE4E4E4" VerticalContentAlignment="Center" Foreground="Black" FontFamily="Candara" Text="{Binding Path=Code, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBox adorners:Watermark.Text="Nazwa:" HorizontalAlignment="Left" Height="20" Margin="116,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="595" VerticalContentAlignment="Center" BorderBrush="#FFE4E4E4" FontFamily="Candara" Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBox adorners:Watermark.Text="Ulica:" HorizontalAlignment="Left" Height="20" Margin="116,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" BorderBrush="#FFE4E4E4" FontFamily="Candara" Text="{Binding Path=Street, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBlock HorizontalAlignment="Left" Height="20" Margin="391,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" FontFamily="Candara"><Run Text="nr"/><Run Text=" domu/lokalu"/></TextBlock>
+                            <TextBox adorners:Watermark.Text="nr:" HorizontalAlignment="Left" Height="20" Margin="481,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" BorderBrush="#FFE4E4E4" FontFamily="Candara" Text="{Binding Path=HouseNumber, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBox adorners:Watermark.Text="Kod pocztowy:" HorizontalAlignment="Left" Height="20" Margin="116,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" BorderBrush="#FFE4E4E4" FontFamily="Candara" Text="{Binding Path=PostalCode, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBox adorners:Watermark.Text="Miejscowość:" HorizontalAlignment="Left" Height="20" Margin="226,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" BorderBrush="#FFE4E4E4" FontFamily="Candara" Text="{Binding Path=City, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBlock Height="20" Margin="66,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" HorizontalAlignment="Left" TextAlignment="Right" FontFamily="Candara"><Run Language="pl-pl" Text="NIP"/></TextBlock>
+                            <TextBox adorners:Watermark.Text="NIP:" HorizontalAlignment="Left" Height="20" Margin="116,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" BorderBrush="#FFE4E4E4" FontFamily="Candara" Text="{Binding Path=NIP, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBlock HorizontalAlignment="Left" Height="20" Margin="271,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" TextAlignment="Right" RenderTransformOrigin="1.182,0.504" FontFamily="Candara"><Run Language="pl-pl" Text="REGON"/></TextBlock>
+                            <TextBox adorners:Watermark.Text="REGON:" HorizontalAlignment="Left" Height="20" Margin="336,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" BorderBrush="#FFE4E4E4" FontFamily="Candara" Text="{Binding Path=Regon, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBlock HorizontalAlignment="Left" Height="20" Margin="71,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" TextAlignment="Right" FontFamily="Candara"><Run Language="pl-pl" Text="KRS"/></TextBlock>
+                            <TextBox adorners:Watermark.Text="KRS:" HorizontalAlignment="Left" Height="20" Margin="116,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" BorderBrush="#FFE4E4E4" FontFamily="Candara" Text="{Binding Path=Krs, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBlock HorizontalAlignment="Left" Height="20" Margin="56,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" TextAlignment="Right" FontFamily="Candara"><Run Language="pl-pl" Text="PESEL"/></TextBlock>
+                            <TextBox adorners:Watermark.Text="PESEL:" HorizontalAlignment="Left" Height="20" Margin="116,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" BorderBrush="#FFE4E4E4" FontFamily="Candara" Text="{Binding Path=Pesel, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBlock HorizontalAlignment="Left" Height="20" Margin="261,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" TextAlignment="Right" FontFamily="Candara"><Run Language="pl-pl" Text="Nr dowodu"/></TextBlock>
+                            <TextBox adorners:Watermark.Text="Dowód osobisty:" HorizontalAlignment="Left" Height="20" Margin="336,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" BorderBrush="#FFE4E4E4" FontFamily="Candara" Text="{Binding Path=IdNumber, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBlock HorizontalAlignment="Left" Height="25" Margin="10,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" FontSize="10" TextAlignment="Right" FontFamily="Candara"><Run Language="pl-pl" Text="Osoba upoważniona  do odbioru faktur"/></TextBlock>
+                            <TextBox adorners:Watermark.Text="Odbiorca:" HorizontalAlignment="Left" Height="20" Margin="116,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="595" BorderBrush="#FFE4E4E4" FontFamily="Candara" Text="{Binding Path=FirstName, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBlock HorizontalAlignment="Left" Height="20" Margin="46,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Right" FontFamily="Candara"><Run Language="pl-pl" Text="Telefony"/></TextBlock>
+                            <TextBox adorners:Watermark.Text="Telefony:" HorizontalAlignment="Left" Height="20" Margin="116,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="595" BorderBrush="#FFE4E4E4" FontFamily="Candara" Text="{Binding Path=PhoneNumber, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBlock HorizontalAlignment="Left" Height="20" Margin="46,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Right" FontFamily="Candara"><Run Language="pl-pl" Text="E-mail"/></TextBlock>
+                            <TextBox adorners:Watermark.Text="E-mail:" HorizontalAlignment="Left" Height="20" Margin="116,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="595" BorderBrush="#FFE4E4E4" FontFamily="Candara" Text="{Binding Path=Email, UpdateSourceTrigger=PropertyChanged}"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Inne">
+                <Grid Background="#FF005F7F">
+                    <Grid Margin="10,10,10,67" Background="#FF005F7F"/>
+                    <StackPanel Margin="10,414,10,0">
+                        <Grid Height="70">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="529*"/>
+                                <ColumnDefinition Width="123*"/>
+                                <ColumnDefinition Width="122*"/>
+
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="357" Foreground="White" Margin="0,-3,0,0" FontFamily="Candara"><Run Language="pl-pl" Text="Musisz podać kod kontrahenta! Musisz podać nazwę kontrahenta!"/></TextBlock>
+                            <Button Grid.Column="1" Content="Zapisz" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Width="93" Background="White" BorderBrush="#FFFBFBFB" FontFamily="Candara" Command="{Binding SaveClose}">
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                            <Button Grid.Column="2" Content="Anuluj" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Width="93" Background="White" BorderBrush="#FFFBFBFB" FontFamily="Candara">
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                    <Border Background="White" BorderBrush="#FF005F7F" BorderThickness="1,1,1,1" CornerRadius="15,15,15,15" Margin="10,10,10,72">
+                        <Grid Margin="11,11,11,9" Background="White">
+                            <TextBlock HorizontalAlignment="Left" Height="20" Margin="116,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Background="White" TextAlignment="Right" FontFamily="Candara"><Run Language="pl-pl" Text="Domyślna forma płatności:"/></TextBlock>
+                            <ComboBox HorizontalAlignment="Left" Height="20" Margin="306,10,0,0" VerticalAlignment="Top" Width="194" BorderBrush="White" Foreground="#FFC3C3C3" FontFamily="Candara" ItemsSource="{Binding PaymentMethod}" DisplayMemberPath="NamePaymentMethod" SelectedValue="DefaultPaymentMethod" SelectedValuePath="DefaultPaymentMethod">
+                                <ComboBox.Background>
+                                    <LinearGradientBrush EndPoint="0,1">
+                                        <GradientStop Color="White"/>
+                                        <GradientStop Color="White" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </ComboBox.Background>
+                            </ComboBox>
+                            <TextBlock HorizontalAlignment="Left" Height="20" Margin="140,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" TextAlignment="Right" FontFamily="Candara"><Run Language="pl-pl" Text="Domyślny rabat:"/></TextBlock>
+                            <ComboBox HorizontalAlignment="Left" Height="20" Margin="306,49,0,0" VerticalAlignment="Top" Width="194" FontFamily="Candara" ItemsSource="{Binding Discounts}" DisplayMemberPath="Percentage" SelectedValue="DefaultPaymentMethod" SelectedValuePath="DefaultPaymentMethod"/>
+                            <TextBlock HorizontalAlignment="Left" Height="20" Margin="135,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" TextAlignment="Right" FontFamily="Candara"><Run Language="pl-pl" Text="Domyślny cennik:"/></TextBlock>
+                            <ComboBox HorizontalAlignment="Left" Height="20" Margin="306,88,0,0" VerticalAlignment="Top" Width="194" FontFamily="Candara" ItemsSource="{Binding DefaultPriceList}" SelectedItem="{Binding DefaultPrice, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <GroupBox Header="Typ" Margin="35,137,35,155" BorderBrush="#FF005F7F" FontFamily="Arial">
+                                <Grid>
+                                    <CheckBox Content="Odbiorca" HorizontalAlignment="Left" Height="24" VerticalAlignment="Center" Width="120" Margin="129,0,0,0" FontFamily="Candara"/>
+                                    <CheckBox Content="Dostawca" HorizontalAlignment="Left" Height="24" VerticalAlignment="Center" Width="145" Margin="254,0,0,0" FontFamily="Candara"/>
+
+                                </Grid>
+                            </GroupBox>
+                            <GroupBox Header="Bank kontrahenta" Margin="35,227,35,25" BorderBrush="#FF005F7F" FontFamily="Arial">
+                                <Grid Height="115">
+                                    <TextBlock HorizontalAlignment="Left" Height="20" Margin="79,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.6,-2.947" TextAlignment="Right" FontFamily="Candara"><Run Language="pl-pl" Text="Nazwa:"/></TextBlock>
+                                    <TextBox adorners:Watermark.Text="Nazwa banku:" HorizontalAlignment="Left" Height="20" Margin="144,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="495" MinWidth="4" BorderBrush="#FFE4E4E4" FontFamily="Candara" Text="{Binding Path=NameBank, UpdateSourceTrigger=PropertyChanged}"/>
+                                    <TextBlock HorizontalAlignment="Left" Height="20" Margin="49,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" TextAlignment="Right" FontFamily="Candara"><Run Language="pl-pl" Text="Nr. konta:"/></TextBlock>
+                                    <TextBox adorners:Watermark.Text="Numer konta:" HorizontalAlignment="Left" Height="20" Margin="144,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="495" BorderBrush="#FFE4E4E4" FontFamily="Candara" Text="{Binding Path=NameBank, UpdateSourceTrigger=PropertyChanged}"/>
+
+
+                                </Grid>
+                            </GroupBox>
+
+                        </Grid>
+                    </Border>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

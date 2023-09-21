@@ -1,0 +1,83 @@
+﻿<Window x:Class="Magazynuj.UI.View.DiscountInvoiceView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Magazynuj.UI.View"
+        mc:Ignorable="d"
+        Title="Rabat dla wszystkich pozycji" Height="215" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="12*"/>
+                <ColumnDefinition Width="12*"/>
+                <ColumnDefinition Width="12*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="12*"/>
+                <ColumnDefinition Width="12*"/>
+                <ColumnDefinition Width="20*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="3" VerticalAlignment="Center"  Height="18" >
+                <TextBlock Text="Rabat:" HorizontalAlignment="Right"/>
+            </StackPanel>
+            <StackPanel Grid.Column="5" VerticalAlignment="Center" Height="20" >
+                <TextBox/>
+            </StackPanel>
+            <StackPanel Grid.Column="7" VerticalAlignment="Center" Height="18" >
+                <TextBlock Text="%"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="UWAGA: Po zatwierdzeniu wszystkie pozycje zostaną zmienione." TextAlignment="Center" />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="0">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="Nadaj rabat dla wszystkich pozycji na dokumencie." TextAlignment="Center" />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="4">
+            <StackPanel Background="#FF005F7F" Grid.ColumnSpan="3">
+                <Grid Height="45">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="61*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button Content="TAK" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="80" BorderBrush="#FF707070" Background="White" FontFamily="Candara">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button Content="NIE" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="80" BorderBrush="#FF707070" Background="White" FontFamily="Candara">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>

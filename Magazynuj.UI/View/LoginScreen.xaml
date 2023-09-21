@@ -1,0 +1,25 @@
+﻿<Window x:Class="Magazynuj.UI.View.LoginScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:adorners="http://gu.se/Adorners"
+        xmlns:local="clr-namespace:Magazynuj.UI.View" xmlns:viewmodels="clr-namespace:Magazynuj.UI.ViewModels"
+        mc:Ignorable="d"
+        Title="Panel logowania" Height="519" Width="500" FontSize="14" Background="#FF005F7F" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <viewmodels:LoginScreenViewModel/>
+    </Window.DataContext>
+    <Border Background="#e2e2e2" CornerRadius="20" Margin="20">
+        <StackPanel Margin="20">
+            <Label Content="LOGOWANIE" Foreground="Black" FontSize="25" HorizontalAlignment="Center"/>
+            <Label Content="APLIKACJA MAGAZYNUJ" Foreground="Black" FontSize="25" HorizontalAlignment="Center"/>
+            <Separator></Separator>
+            <Label Content="Login" Foreground="Black"/>
+            <TextBox Name="txtUsername" Background="#e2e2e3" Foreground="Black" FontSize="18" adorners:Watermark.Text="Podaj login"/>
+            <Label Content="Hasło" Foreground="Black"/>
+            <PasswordBox Name="txtPassword" Background="#e2e2e3" Foreground="Black" FontSize="18" adorners:Watermark.Text="Podaj hasło"/>
+            <Button Name="btnSubmit" Content="Zaloguj" Margin="60 10" Background="#FF005F7F" Foreground="White" FontSize="18" Click="btnSubmit_Click"/>
+        </StackPanel>
+    </Border>
+</Window>

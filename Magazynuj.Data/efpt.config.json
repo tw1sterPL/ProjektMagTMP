@@ -1,0 +1,241 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "WarehouseManagementContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": null,
+   "OutputContextPath": "Data",
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "Magazynuj.Data",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[AdditionalRemuneration]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AdditionalRemunerationType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Adres]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Bank]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Client]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ClientType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Commodity]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CommodityCategory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CommodityDetails]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CommodityDimensions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CommodityMark]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Company]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CompanyDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CompanyLocation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ContractData]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Contractor]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ContractorDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Country]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DataAces]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DefaultPaymentMethod]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DefaultPriceList]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Department]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Discount]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DiscountType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Employee]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FixedAssets]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FixedAssetsType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Gender]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Invoice]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[InvoiceType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LoyaltyCard]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MaritalStatus]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OfficeKeys]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OrderTab]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OrderType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Payment]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PaymentType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PayrollClient]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PersonalData]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Remuneration]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ShiftHours]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ShiftSupervisor]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[shiftType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[StoragePlace]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Supplier]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VacationDays]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VacationSchedule]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VacationType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Warehouse]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WarehouseReceipts]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WorkType]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "LAPTOP-6K6T4R49\\WAREHOUSE.WarehouseManagement",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

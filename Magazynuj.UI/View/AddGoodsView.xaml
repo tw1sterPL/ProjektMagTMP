@@ -1,0 +1,129 @@
+﻿<Window x:Class="Magazynuj.UI.View.AddGoodsView"
+        x:Name="WindowsForm"
+        xmlns:adorners="http://gu.se/Adorners"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:local="clr-namespace:Magazynuj.UI.View" xmlns:viewmodels="clr-namespace:Magazynuj.UI.ViewModels" xmlns:i1="http://schemas.microsoft.com/expression/2010/interactivity"
+        mc:Ignorable="d"
+        Title="Towar" Height="525" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Magazynuj.UI;component/View/Dictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.DataContext>
+        <viewmodels:AddGoodsViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid Background="#1984c5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="9*"/>
+                <RowDefinition Height="420*"/>
+                <RowDefinition Height="80*"/>
+            </Grid.RowDefinitions>
+            <Grid Background="#1984c5" Grid.Row="1"/>
+            <Border Background="#e2e2e2" BorderBrush="#1984c5" BorderThickness="1,1,1,1" CornerRadius="15,15,15,15" Margin="10,1,10,2" Grid.Row="1">
+                <Grid Margin="9,11,13,9">
+                    <Grid.Background>
+                        <SolidColorBrush Color="#e2e2e2"/>
+                    </Grid.Background>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="92*"/>
+                        <RowDefinition Height="303*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="8*"/>
+                            <RowDefinition Height="15*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="169*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Height="20" Text="Kod" TextAlignment="Right" VerticalAlignment="Center"/>
+                        <TextBox Grid.Row="0" Grid.Column="2" adorners:Watermark.Text="Kod towaru:" Height="20" Width="150" HorizontalAlignment="Left" BorderBrush="#FFBDBDBD" Background="White" BorderThickness="0,0,0,3" Text="{Binding Path=Code, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Height="20" Text="Nazwa" TextAlignment="Right" VerticalAlignment="Top"/>
+                        <TextBox Grid.Row="1" Grid.Column="2" Height="50" Width="660" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="#FFBDBDBD" Background="White" BorderThickness="0,0,0,3" Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}"/>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30*"/>
+                            <RowDefinition Height="30*"/>
+                            <RowDefinition Height="30*"/>
+                            <RowDefinition Height="30*"/>
+                            <RowDefinition Height="30*"/>
+                            <RowDefinition Height="30*"/>
+                            <RowDefinition Height="113*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="160*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="80*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="160*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="256*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Stawka VAT" VerticalAlignment="Center" TextAlignment="Right"/>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Jm" VerticalAlignment="Center" TextAlignment="Right"/>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Cena A" VerticalAlignment="Center" TextAlignment="Right"/>
+                        <TextBlock Grid.Row="3" Grid.Column="0" Text="Cena B" VerticalAlignment="Center" TextAlignment="Right"/>
+                        <TextBlock Grid.Row="4" Grid.Column="0" Text="Cena C" VerticalAlignment="Center" TextAlignment="Right"/>
+                        <TextBlock Grid.Row="5" Grid.Column="0" Text="Cena D" VerticalAlignment="Center" TextAlignment="Right"/>
+                        <TextBox Grid.Row="0" Grid.Column="2"  adorners:Watermark.Text="Stawka VAT:" VerticalAlignment="Center" Height="20" Width="110" HorizontalAlignment="Left" BorderThickness="0,0,0,3" BorderBrush="#FFBDBDBD" Background="White" Text="{Binding Path=RateVat, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBox Grid.Row="1" Grid.Column="2" adorners:Watermark.Text="Jednostka miary" VerticalAlignment="Center" Height="20" Width="110" HorizontalAlignment="Left" BorderThickness="0,0,0,3" BorderBrush="#FFBDBDBD" Background="White" Text="{Binding Path=Jm, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBox Grid.Row="2" Grid.Column="2" adorners:Watermark.Text="Cena sprzedaży A:" VerticalAlignment="Center" Height="20" Width="110" HorizontalAlignment="Left" BorderThickness="0,0,0,3" BorderBrush="#FFBDBDBD" Background="White" Text="{Binding Path=PriceA, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Row="3" Grid.Column="2" adorners:Watermark.Text="Cena sprzedaży B:" VerticalAlignment="Center" Height="20" Width="110" HorizontalAlignment="Left" BorderThickness="0,0,0,3" BorderBrush="#FFBDBDBD" Background="White" Text="{Binding Path=PriceB, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Row="4" Grid.Column="2" adorners:Watermark.Text="Cena sprzedaży C:" VerticalAlignment="Center" Height="20" Width="110" HorizontalAlignment="Left" BorderThickness="0,0,0,3" BorderBrush="#FFBDBDBD" Background="White" Text="{Binding Path=PriceC, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Row="5" Grid.Column="2" adorners:Watermark.Text="Cena sprzedaży D:" VerticalAlignment="Center" Height="20" Width="110" HorizontalAlignment="Left" BorderThickness="0,0,0,3" BorderBrush="#FFBDBDBD" Background="White" Text="{Binding Path=PriceD, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Row="1" Grid.Column="6" adorners:Watermark.Text="EAN" VerticalAlignment="Center" Height="20" Width="110" HorizontalAlignment="Left" BorderThickness="0,0,0,3" BorderBrush="#FFBDBDBD" Background="White" Text="{Binding Path=CodeEan, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Row="2" Grid.Column="6" adorners:Watermark.Text="Cena brutto A:" VerticalAlignment="Center" Height="20" Width="110" HorizontalAlignment="Left" BorderThickness="0,0,0,3" BorderBrush="#FFBDBDBD" Background="White" Text="{Binding Path=BruttoA, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Row="3" Grid.Column="6" adorners:Watermark.Text="Cena brutto B:" VerticalAlignment="Center" Height="20" Width="110" HorizontalAlignment="Left" BorderThickness="0,0,0,3" BorderBrush="#FFBDBDBD" Background="White" Text="{Binding Path=BruttoB, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Row="4" Grid.Column="6" adorners:Watermark.Text="Cena brutto C:" VerticalAlignment="Center" Height="20" Width="110" HorizontalAlignment="Left" BorderThickness="0,0,0,3" BorderBrush="#FFBDBDBD" Background="White" Text="{Binding Path=BruttoC, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Row="5" Grid.Column="6" adorners:Watermark.Text="Cena brutto D:" VerticalAlignment="Center" Height="20" Width="110" HorizontalAlignment="Left" BorderThickness="0,0,0,3" BorderBrush="#FFBDBDBD" Background="White" Text="{Binding Path=BruttoD, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBlock Grid.Row="1" Grid.Column="4" Text="Kod EAN" VerticalAlignment="Center" TextAlignment="Right"/>
+                        <TextBlock Grid.Row="2" Grid.Column="4" Text="Brutto A:" VerticalAlignment="Center" TextAlignment="Right"/>
+                        <TextBlock Grid.Row="3" Grid.Column="4" Text="Brutto B:" VerticalAlignment="Center" TextAlignment="Right"/>
+                        <TextBlock Grid.Row="4" Grid.Column="4" Text="Brutto C:" VerticalAlignment="Center" TextAlignment="Right"/>
+                        <TextBlock Grid.Row="5" Grid.Column="4" Text="Brutto D:" VerticalAlignment="Center" TextAlignment="Right"/>
+                    </Grid>
+                </Grid>
+            </Border>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="51*"/>
+                    <ColumnDefinition Width="12*"/>
+                    <ColumnDefinition Width="13*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="11*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="Musisz podać kod, nazwę i cenę towaru!" VerticalAlignment="Center" Foreground="#FFF7F7F7" />
+                <Button Grid.Column="2" Grid.Row="1" Content="Zapisz" Style="{StaticResource ButtonStandard}" Command="{Binding SaveClose}">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Grid.Column="3" Grid.Row="1" Content="Anuluj" Style="{StaticResource ButtonStandard}" Command="{Binding Close}">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

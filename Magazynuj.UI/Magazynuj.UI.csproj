@@ -1,0 +1,174 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewModels\**" />
+    <EmbeddedResource Remove="ViewModels\**" />
+    <None Remove="ViewModels\**" />
+    <Page Remove="ViewModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Source\Icons\creditnote.png" />
+    <None Remove="Source\Icons\danger.png" />
+    <None Remove="Source\Icons\dodaj.png" />
+    <None Remove="Source\Icons\dokumenty.png" />
+    <None Remove="Source\Icons\drukuj.png" />
+    <None Remove="Source\Icons\edytuj.png" />
+    <None Remove="Source\Icons\faktura.png" />
+    <None Remove="Source\Icons\klient.png" />
+    <None Remove="Source\Icons\kontahenci.png" />
+    <None Remove="Source\Icons\listaklientow.png" />
+    <None Remove="Source\Icons\listatowarow.png" />
+    <None Remove="Source\Icons\nota.png" />
+    <None Remove="Source\Icons\proforma.png" />
+    <None Remove="Source\Icons\skasuj.png" />
+    <None Remove="Source\Icons\sprzedaz.png" />
+    <None Remove="Source\Icons\towar.png" />
+    <None Remove="Source\Icons\towary.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="ViewModels\AddGoodsViewModel.cs" />
+    <Compile Include="ViewModels\AllGoodsListViewModel.cs" />
+    <Compile Include="ViewModels\AllGoodsListWindowViewModel.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\CommandViewModel.cs" />
+    <Compile Include="ViewModels\CorrectiveInvoiceListViewModel.cs" />
+    <Compile Include="ViewModels\CounterPartyListViewModel.cs" />
+    <Compile Include="ViewModels\CounterPartyListWindowViewModel.cs" />
+    <Compile Include="ViewModels\DeletedSecondViewModel.cs" />
+    <Compile Include="ViewModels\DeleteViewModel.cs" />
+    <Compile Include="ViewModels\DiscountInvoiceViewModel.cs" />
+    <Compile Include="ViewModels\LoginScreenViewModel.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\NewCounterpartyViewModel.cs" />
+    <Compile Include="ViewModels\NewInvoiceViewModel.cs" />
+    <Compile Include="ViewModels\SaleListAllViewModel.cs" />
+    <Compile Include="ViewModels\Service\CollectionViewModel.cs" />
+    <Compile Include="ViewModels\Service\OneViewModel.cs" />
+    <Compile Include="ViewModels\WorkSpaceViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Gu.Wpf.Adorners" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Utilities" Version="17.4.33103.184" />
+    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+    <PackageReference Include="Prism.Core" Version="8.1.97" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Magazynuj.Data\Magazynuj.Data.csproj" />
+    <ProjectReference Include="..\Magazynuj.Models\Magazynuj.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Source\Icons\creditnote.png" />
+    <Resource Include="Source\Icons\danger.png" />
+    <Resource Include="Source\Icons\dodaj.png" />
+    <Resource Include="Source\Icons\dokumenty.png" />
+    <Resource Include="Source\Icons\drukuj.png" />
+    <Resource Include="Source\Icons\edytuj.png" />
+    <Resource Include="Source\Icons\faktura.png" />
+    <Resource Include="Source\Icons\klient.png" />
+    <Resource Include="Source\Icons\kontahenci.png" />
+    <Resource Include="Source\Icons\listaklientow.png" />
+    <Resource Include="Source\Icons\listatowarow.png" />
+    <Resource Include="Source\Icons\nota.png" />
+    <Resource Include="Source\Icons\proforma.png" />
+    <Resource Include="Source\Icons\skasuj.png" />
+    <Resource Include="Source\Icons\sprzedaz.png" />
+    <Resource Include="Source\Icons\towar.png" />
+    <Resource Include="Source\Icons\towary.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="View\CounterPartyList.xaml.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="View\MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\NewCounterparty.xaml.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="View\SaleListView.xaml.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="View\AddCorrectiveInvoiceView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddGoodsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AllGoodsListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AllGoodsListWindowView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\BankView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CompanyDataView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CorrectiveInvoiceListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CounterPartyList.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CounterPartyListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CounterPartyListWindowView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\DeletedSecondView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\DeletedView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Dictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\DiscountInvoiceView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\NewCounterparty.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\NewCounterpartyView.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\NewInvoiceView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SaleListView.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>
